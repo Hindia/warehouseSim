@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Compartments</title>
 </head>
 <body>
-
+<h2>Shelf {{ shelf.shelfNum }} at {{ shelf.shelfPosition }}</h2>
+<h3>Contains </h3>
+<ul>
+    {% for compartment in shelf.compartment_set.all %}
+        <li><a href="/game/{{ shelf.shelfNum }}/{{ compartment.compartmentNum }}">Compartment {{ compartment.compartmentNum }} </a></li>
+    {% endfor %}
+</ul>
 </body>
 </html>
+

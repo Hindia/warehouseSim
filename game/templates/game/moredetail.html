@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Items</title>
+</head>
+<body>
+<h2>Compartment {{ compartment.compartmentNum }} at {{ compartment.compartmentPosition }}</h2>
+
+    {% for item in compartment.item_set.all %}
+         contains {{ compartment.numberOfItems }} {{ item.itemName }} -  <img src="{{ item.itemPic }}";>
+    {% endfor %}
+
+</body>
+</html>

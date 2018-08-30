@@ -5,10 +5,11 @@
     <title>Shelves</title>
 </head>
 <body>
+<h1>Here are your shelves</h1>
 {% if all_shelves %}
     <ul>
         {% for shelf in all_shelves %}
-        <li><a href="/game/{{ shelf.shelfNum }}">Shelf {{ shelf.shelfNum }} at {{ shelf.shelfPosition }} </a></li>
+        <li><a href="/game/{{ shelf.shelfNum }}">Shelf {{ shelf.shelfNum }} </a></li>
         {% endfor %}
     </ul>
 {% else %}
