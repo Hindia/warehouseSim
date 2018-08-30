@@ -28,4 +28,4 @@ class Item(models.Model):
     compartment = models.ForeignKey(Compartment, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.itemName + ' - ' + self.compartment
+        return self.itemName
