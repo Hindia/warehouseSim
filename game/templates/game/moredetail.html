@@ -8,7 +8,7 @@
 <h2>Compartment {{ compartment.compartmentNum }} at {{ compartment.compartmentPosition }}</h2>
 
     {% for item in compartment.item_set.all %}
-         contains {{ compartment.numberOfItems }} {{ item.itemName }} -  <img src="{{ item.itemPic }}";>
+contains {{ compartment.numberOfItems }} {{ item.itemName }} <br>  <img src="{{ item.itemPic }}" height="100" width="100"/>
     {% endfor %}
 
 </body>
