@@ -24,7 +24,7 @@ class Compartment(models.Model):
 
 class Item(models.Model):
     itemName = models.CharField(unique=True, max_length=250)
-    itemPic = models.CharField(max_length=1000)
+    itemPic = models.CharField(unique=True, max_length=1000)
     compartment = models.ForeignKey(Compartment, on_delete=models.CASCADE)
 
     def __str__(self):
