@@ -15,5 +15,41 @@
 {% else %}
 <h3> no shelves to show</h3>
 {% endif %}
+
+<script>
+	List();
+	function List(){
+		var request = new XMLHttpRequest();
+		request.open("GET", "http://localhost:8000/", false);
+		request.setRequestHeader('Access-Control-Allow-Origin','*');
+		request.setRequestHeader('Access-Control-Allow-Methods','GET');
+        request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+		request.send();
+
+		var array = JSON.parse(request.responseText);
+		var temp="<table ><tr><th>id</th><th>Shelf Name</th><th>Shelf Position</th></tr>";
+		for(var i=0;i<array.length;i++){
+			var shelfName = array[i].shelfNum;
+			var shelfPosition = array[i].shelfPosition;
+			temp+="<tr><td>"+(i+1)+"</td><td>" + shelfPosition + "</td></tr>";
+		}
+
+		console.log(array);
+		temp+="</table>";
+		document.write(temp);
+	}
+
+	function readCookie(name) {
+         var nameEQ = encodeURIComponent(name) + "=";
+         var ca = document.cookie.split(';');
+         for (var i = 0; i < ca.length; i++) {
+             var c = ca[i];
+             while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+             if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+         }
+         return null;
+    }
+</script>
 </body>
+
 </html>
