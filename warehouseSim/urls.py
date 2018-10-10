@@ -15,9 +15,16 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from rest_framework.urlpatterns import format_suffix_patterns
+from game import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^game/', include('game.urls')),
+    url(r'^shelves/', views.ShelfList.as_view()),
+    url(r'^compartments/', views.CompartmentList.as_view()),
+    url(r'^items/', views.ItemList.as_view()),
     url(r'^$', include('game.urls')),
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
