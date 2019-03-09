@@ -3,8 +3,11 @@ from . import views
 from rest_framework import routers
 
 urlpatterns = [
+    #/
+    url(r'^$', views.index, name='game'),
+
     #/game/
-    url(r'^$', views.index, name='index'),
+    url(r'^game/', views.index, name='index'),
 
     #/game/1/
     url(r'^(?P<shelfNum>[0-9]+)/$', views.detail, name='detail'),

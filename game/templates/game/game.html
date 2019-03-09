@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<title>game</title>
+	<style>
+	canvas {
+	    border:1px solid #d3d3d3;
+		background-color: "white";
+		}
+	
+	#content {
+		  position: absolute;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  top: 50%;
+	}
+		
+	</style>
+</head>
+<body onload="startGame()">
+	<script>
+	//STILL WORKING ON RESPONSIVENESS OF THE WEBPAGE
+	var secs=0;
+	var steps=0;
+	var ms=0;
+	var  myPlayer, desk, direction,pic,prevImg;
+	var compartments=[];
+	var  list, timer, stepCounter;
+	var requiredItems=[];
+	var availableItems=[];
+	var picsArray=[
+				"img/american ball.png",
+				"img/attach.png",
+				"img/bag.png",
+				"img/ball.png",
+				"img/basket ball.png",
+				"img/battery.png",
+				"img/book.png",
+				"img/bowling ball.png",
+				"img/briefcase.png",
+				"img/brush.png",
+				"img/bulb.png",
+				"img/calculator.png",
+				"img/camera.png",
+				"img/chair.png",
+				"img/chair2.png",
+				"img/clock.png",
+				"img/comb.png",
+				"img/cycle.png",
+				"img/cycle2.png",
+				"img/drill.png",
+				"img/fan.png",
+				"img/flash.png",
+				"img/fork.png",
+				"img/glass.png",
+				"img/glass2.png",
+				"img/glasses.png",
+				"img/grater.png",
+				"img/hammer.png",
+				"img/hanger.png",
+				"img/hanger2.png",
+				"img/hat.png",
+				"img/hat2.png",
+				"img/headphone.png",
+				"img/ipod.png",
+				"img/iron.png",
+				"img/joystick.png",
+				"img/keyboard.png",
+				"img/knife.png",
+				"img/lock.png",
+				"img/marker.png",
+				"img/mic.png",
+				"img/microwave.png",
+				"img/mixer.png",
+				"img/mixer2.png",
+				"img/mobile.png",
+				"img/monitor.png",
+				"img/mouse.png",
+				"img/oil.png",
+				"img/pan.png",
+				"img/pencil.png",
+				"img/pillow.png",
+				"img/pitchfork.png",
+				"img/plier.png",
+				"img/pot.png",
+				"img/pram.png",
+				"img/printer.png",
+				"img/pushpin.png",
+				"img/radiator.png",
+				"img/rake.png",
+				"img/roller.png",
+				"img/roller2.png",
+				"img/ruler.png",
+				"img/saw.png",
+				"img/scale.png",
+				"img/scissor.png",
+				"img/scooter.png",
+				"img/screw.png",
+				"img/screwdriver.png",
+				"img/shovel.png",
+				"img/sakteboard.png",
+				"img/sofa.png",
+				"img/spatula.png",
+				"img/stapler.png",
+				"img/suitcase.png",
+				"img/tablet.png",
+				"img/tea pot.png",
+				"img/tennis ball.png",
+				"img/toilet paper.png",
+				"img/tv.png",
+				"img/tyre.png",
+				"img/tyre2.png",
+				"img/umbrella.png",
+				"img/vacuum.png",
+				"img/videocam.png",
+				"img/washing machine.png",
+				"img/wheel chair.png",
+				"img/wheel.png",
+				"img/whisk.png",
+				
+				
+		];
+	
+	function startGame() {
+		 myGameArea.start();
+		myPlayer = new component(780,150,"img/person.png",30,30,"img");
+		timer=new component(500,800,"black","30px","Tw Cen MT", "text");
+		stepCounter=new component( 200,800,"black","30px","Tw Cen MT","text");
+		list=new component(850,150,"black","30px","Tw Cen MT","text");
+		desk=new component(810,150,"img/desk.png",50,50,"img");
+		
+	}
+	
+	var myGameArea = {
+		canvas : document.createElement("canvas"),
+		start : function() {
+			this.canvas.width = window.innerWidth;
+			this.canvas.height = window.innerHeight;
+			this.c = this.canvas.getContext("2d");	//context
+			document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+			var x,y,z;
+		var yt=180;		
+			z=0;
+		for(x=50; x<=700; x+=50){
+			for(y=150; y<=700; y+=50){
+				if(x%150!=0 && y!=400 && y!=700){
+					
+					pic=picsArray[z];	
+					compartments.push(new component(x,y, "gray",48,48));
+					availableItems.push(new component(x+10,y+10,pic,30,30,"img"));
+					if(x<500){
+						requiredItems.push(new component(1080,yt,pic,30,30,"img"));
+						yt+=50;
+						
+					}
+					z+=1;
+					}
+			}
+		}
+			this.interval = setInterval(updateGameArea, 50);
+			window.addEventListener('mousedown', function (e) {
+				myGameArea.x = e.pageX;
+				myGameArea.y = e.pageY;
+				myPlayer.color="img/person2.png";
+			})
+			window.addEventListener('mouseup', function (e) {
+				myGameArea.x = false;
+				myGameArea.y = false;
+			})
+			window.addEventListener('touchstart', function (e) {
+				myGameArea.x = e.pageX;
+			myGameArea.y = e.pageY;
+			})
+			window.addEventListener('touchend', function (e) {
+				myGameArea.x = false;
+				myGameArea.y = false;
+			})
+		}, 
+		myTimer: function (){
+			sec+=1;
+		},
+		clear : function() {
+			this.c.clearRect(0, 0, this.canvas.width, this.canvas.height);
+		},
+		stop : function() {
+			clearInterval(this.interval);
+		}
+	
+	}
+
+	function component(x,y,color,width, height,type){
+		this.type=type;
+		this.width = width;
+		this.height = height;
+		this.color=color;
+		this.x = x;
+		this.y = y;  
+		this.speedX = 0;
+		this.speedY = 0;
+		this.update = function() {
+			var ctx = myGameArea.c;
+			if (this.type == "text") {
+				ctx.font = this.width + " " + this.height;
+				ctx.fillStyle = this.color;
+				ctx.fillText(this.text, this.x, this.y);
+			} else if (this.type == "img") {
+				this.img = new Image();
+				this.img.src =this.color;
+				ctx.drawImage(this.img, this.x, this.y,this.width, this.height);
+			}
+			else {
+				ctx.fillStyle = this.color;
+				ctx.fillRect(this.x, this.y, this.width, this.height);
+			}
+			
+		}
+		this.clicked = function() {
+			var myleft = this.x;
+			var myright = this.x + (this.width);
+			var mytop = this.y;
+			var mybottom = this.y + (this.height);
+			var clicked = true;
+			if ((mybottom < myGameArea.y) || (mytop > myGameArea.y)|| (myright < myGameArea.x) || (myleft > myGameArea.x)) {
+				clicked = false;
+			}
+			return clicked;
+		}
+		this.crashWith = function(otherobj) {
+			var myleft = this.x;
+			var myright = this.x + (this.width);
+			var mytop = this.y;
+			var mybottom = this.y + (this.height);
+			var otherleft = otherobj.x;
+			var otherright = otherobj.x + (otherobj.width);
+			var othertop = otherobj.y;
+			var otherbottom = otherobj.y + (otherobj.height);
+			var crash = true;
+			if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
+				crash = false;
+			}
+			return crash;
+		}
+		this.newPos = function() {
+			this.x += this.speedX;
+			this.y += this.speedY;        
+		}     
+	}
+	
+	function updateGameArea() {
+		ms+=1;
+		if(ms%20==0){
+			secs+=1;
+		}
+		
+		//myGameArea.stop(); ALSO, if game over reset secs
+		myGameArea.clear();
+		timer.text="Timer: "+secs+" seconds";
+		list.text="Pick up list";//loop in items[]
+		stepCounter.text="Total Steps: "+ steps;
+		
+		
+		
+		if (myGameArea.x && myGameArea.y) {
+				for (i = 0; i <availableItems.length; i += 1) {
+					if (availableItems[i].clicked()){
+						availableItems[i].color="gray";
+					}
+				}
+			}
+		
+	
+		for (i = 0; i < compartments.length; i += 1) {
+			if(myPlayer.crashWith(compartments[i])){//find a faster way to check crash and update steps
+				steps-=1;
+				if(direction==1){
+					myPlayer.y+=15;
+				}
+				else if(direction==-1){
+					myPlayer.y-=15;
+				}
+				else if(direction==2){
+					myPlayer.x-=15;
+				}
+				else if(direction==-2){
+					myPlayer.x+=15;
+				}
+			}
+			compartments[i].update();
+			availableItems[i].update();
+			
+			if(i<11){
+				//requiredItems[i].update();
+			}
+		}
+		desk.update();
+		stepCounter.update();
+		list.update();
+		timer.update();
+		myPlayer.newPos();
+		myPlayer.update();
+	}
+		prevImg="img/person.png";
+	 window.addEventListener("keydown", function (event){
+		var key= event.code;	//variable for holding the key pressed
+		//myPlayer.color="img/cycle.png";
+		if(myPlayer.y > 110 && (key == "ArrowUp"))   {
+			if(prevImg=="img/person4.png" ){
+				myPlayer.color="img/person3.png";
+				prevImg="img/person3.png";
+				}
+				else{
+					myPlayer.color="img/person4.png";
+					prevImg="img/person4.png";
+				}
+			direction=1;
+			steps+=1;
+			myPlayer.y-=15;
+		}
+		else if(myPlayer.y < 700 && (key == "ArrowDown" )) {
+			if(prevImg=="img/person4.png"){
+				myPlayer.color="img/person3.png";
+				prevImg="img/person3.png";
+				}
+				else{
+					myPlayer.color="img/person4.png";
+					prevImg="img/person4.png";
+				}
+			direction=-1;
+			steps+=1;
+			myPlayer.y+=15;
+		}
+		else if(myPlayer.x >10 && (key == "ArrowLeft" )){
+			if(prevImg=="img/person6.png"){
+				myPlayer.color="img/person5.png";
+				prevImg="img/person5.png";
+				}
+				else{
+					myPlayer.color="img/person6.png";
+					prevImg="img/person6.png";
+				}
+			direction=-2;
+			steps+=1;
+			myPlayer.x-=15;
+		}	
+		else if(myPlayer.x < 780&& (key == "ArrowRight")){
+			if(prevImg=="img/person.png"){
+				myPlayer.color="img/person2.png";
+				prevImg="img/person2.png";
+				}
+				else{
+					myPlayer.color="img/person.png";
+					prevImg="img/person.png";
+				}
+			direction=2;
+			steps+=1;
+			myPlayer.x+=15;
+		}	
+	}, true);
+	</script>
+	
+</body>
+</html>
