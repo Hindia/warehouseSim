@@ -20,7 +20,7 @@ from game import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^game/', include('game.urls')),
+    url(r'^game/', views.index),
     url(r'^shelves/', views.ShelfList.as_view()),
     url(r'^compartments/', views.CompartmentList.as_view()),
     url(r'^items/', views.ItemList.as_view()),

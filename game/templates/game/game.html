@@ -32,106 +32,24 @@
 	var  list, timer, stepCounter;
 	var requiredItems=[];
 	var availableItems=[];
-	var picsArray=[
-				"img/american ball.png",
-				"img/attach.png",
-				"img/bag.png",
-				"img/ball.png",
-				"img/basket ball.png",
-				"img/battery.png",
-				"img/book.png",
-				"img/bowling ball.png",
-				"img/briefcase.png",
-				"img/brush.png",
-				"img/bulb.png",
-				"img/calculator.png",
-				"img/camera.png",
-				"img/chair.png",
-				"img/chair2.png",
-				"img/clock.png",
-				"img/comb.png",
-				"img/cycle.png",
-				"img/cycle2.png",
-				"img/drill.png",
-				"img/fan.png",
-				"img/flash.png",
-				"img/fork.png",
-				"img/glass.png",
-				"img/glass2.png",
-				"img/glasses.png",
-				"img/grater.png",
-				"img/hammer.png",
-				"img/hanger.png",
-				"img/hanger2.png",
-				"img/hat.png",
-				"img/hat2.png",
-				"img/headphone.png",
-				"img/ipod.png",
-				"img/iron.png",
-				"img/joystick.png",
-				"img/keyboard.png",
-				"img/knife.png",
-				"img/lock.png",
-				"img/marker.png",
-				"img/mic.png",
-				"img/microwave.png",
-				"img/mixer.png",
-				"img/mixer2.png",
-				"img/mobile.png",
-				"img/monitor.png",
-				"img/mouse.png",
-				"img/oil.png",
-				"img/pan.png",
-				"img/pencil.png",
-				"img/pillow.png",
-				"img/pitchfork.png",
-				"img/plier.png",
-				"img/pot.png",
-				"img/pram.png",
-				"img/printer.png",
-				"img/pushpin.png",
-				"img/radiator.png",
-				"img/rake.png",
-				"img/roller.png",
-				"img/roller2.png",
-				"img/ruler.png",
-				"img/saw.png",
-				"img/scale.png",
-				"img/scissor.png",
-				"img/scooter.png",
-				"img/screw.png",
-				"img/screwdriver.png",
-				"img/shovel.png",
-				"img/sakteboard.png",
-				"img/sofa.png",
-				"img/spatula.png",
-				"img/stapler.png",
-				"img/suitcase.png",
-				"img/tablet.png",
-				"img/tea pot.png",
-				"img/tennis ball.png",
-				"img/toilet paper.png",
-				"img/tv.png",
-				"img/tyre.png",
-				"img/tyre2.png",
-				"img/umbrella.png",
-				"img/vacuum.png",
-				"img/videocam.png",
-				"img/washing machine.png",
-				"img/wheel chair.png",
-				"img/wheel.png",
-				"img/whisk.png",
-				
-				
-		];
-	
+	var request = new XMLHttpRequest();
+		request.open("GET", "http://127.0.0.1:8000/items/", false);
+		request.setRequestHeader('Access-Control-Allow-Origin','*');
+		request.setRequestHeader('Access-Control-Allow-Methods','GET');
+        request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+		request.send();
+
+	var picArray = JSON.parse(request.responseText);
+
+
 	function startGame() {
-		 myGameArea.start();
-		myPlayer = new component(780,150,"img/person.png",30,30,"img");
+
+		myPlayer = new component(780,150,picArray[50].itemPic,30,30,"img");
 		timer=new component(500,800,"black","30px","Tw Cen MT", "text");
 		stepCounter=new component( 200,800,"black","30px","Tw Cen MT","text");
 		list=new component(850,150,"black","30px","Tw Cen MT","text");
-		desk=new component(810,150,"img/desk.png",50,50,"img");
+		desk=new component(810,150,picArray[56].itemPic,50,50,"img");
+		myGameArea.start();
 		
 	}
 	
@@ -142,14 +60,13 @@
 			this.canvas.height = window.innerHeight;
 			this.c = this.canvas.getContext("2d");	//context
 			document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-			var x,y,z;
-		var yt=180;		
-			z=0;
+			var x,y,z=0;
+		    var yt=180;
 		for(x=50; x<=700; x+=50){
 			for(y=150; y<=700; y+=50){
 				if(x%150!=0 && y!=400 && y!=700){
 					
-					pic=picsArray[z];	
+					pic=picArray[z];
 					compartments.push(new component(x,y, "gray",48,48));
 					availableItems.push(new component(x+10,y+10,pic,30,30,"img"));
 					if(x<500){
@@ -157,7 +74,7 @@
 						yt+=50;
 						
 					}
-					z+=1;
+					if (z<50) z+=1;
 					}
 			}
 		}
@@ -165,7 +82,7 @@
 			window.addEventListener('mousedown', function (e) {
 				myGameArea.x = e.pageX;
 				myGameArea.y = e.pageY;
-				myPlayer.color="img/person2.png";
+				myPlayer.color=picArray[51].itemPic;
 			})
 			window.addEventListener('mouseup', function (e) {
 				myGameArea.x = false;
@@ -303,57 +220,56 @@
 		myPlayer.newPos();
 		myPlayer.update();
 	}
-		prevImg="img/person.png";
+		prevImg=picArray[50].itemPic;
 	 window.addEventListener("keydown", function (event){
 		var key= event.code;	//variable for holding the key pressed
-		//myPlayer.color="img/cycle.png";
 		if(myPlayer.y > 110 && (key == "ArrowUp"))   {
-			if(prevImg=="img/person4.png" ){
-				myPlayer.color="img/person3.png";
-				prevImg="img/person3.png";
+			if(prevImg==picArray[53].itemPic ){
+				myPlayer.color=picArray[52].itemPic;
+				prevImg=picArray[52].itemPic;
 				}
 				else{
-					myPlayer.color="img/person4.png";
-					prevImg="img/person4.png";
+					myPlayer.color=picArray[53].itemPic;
+					prevImg=picArray[53].itemPic;
 				}
 			direction=1;
 			steps+=1;
 			myPlayer.y-=15;
 		}
 		else if(myPlayer.y < 700 && (key == "ArrowDown" )) {
-			if(prevImg=="img/person4.png"){
-				myPlayer.color="img/person3.png";
-				prevImg="img/person3.png";
+			if(prevImg==picArray[53].itemPic){
+				myPlayer.color=picArray[52].itemPic;
+				prevImg=picArray[52].itemPic;
 				}
 				else{
-					myPlayer.color="img/person4.png";
-					prevImg="img/person4.png";
+					myPlayer.color=picArray[53].itemPic;
+					prevImg=picArray[53].itemPic;
 				}
 			direction=-1;
 			steps+=1;
 			myPlayer.y+=15;
 		}
 		else if(myPlayer.x >10 && (key == "ArrowLeft" )){
-			if(prevImg=="img/person6.png"){
-				myPlayer.color="img/person5.png";
-				prevImg="img/person5.png";
+			if(prevImg==picArray[55].itemPic){
+				myPlayer.color=picArray[54].itemPic;
+				prevImg=picArray[54].itemPic;
 				}
 				else{
-					myPlayer.color="img/person6.png";
-					prevImg="img/person6.png";
+					myPlayer.color=picArray[55].itemPic;
+					prevImg=picArray[55].itemPic;
 				}
 			direction=-2;
 			steps+=1;
 			myPlayer.x-=15;
 		}	
 		else if(myPlayer.x < 780&& (key == "ArrowRight")){
-			if(prevImg=="img/person.png"){
-				myPlayer.color="img/person2.png";
-				prevImg="img/person2.png";
+			if(prevImg==picArray[50].itemPic){
+				myPlayer.color=picArray[51].itemPic;
+				prevImg=picArray[51].itemPic;
 				}
 				else{
-					myPlayer.color="img/person.png";
-					prevImg="img/person.png";
+					myPlayer.color=picArray[50].itemPic;
+					prevImg=picArray[50].itemPic;
 				}
 			direction=2;
 			steps+=1;

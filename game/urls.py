@@ -6,8 +6,6 @@ urlpatterns = [
     #/
     url(r'^$', views.game, name='game'),
 
-    #/game/
-    url(r'^game/', views.index, name='index'),
 
     #/game/1/
     url(r'^(?P<shelfNum>[0-9]+)/$', views.detail, name='detail'),
