@@ -3,107 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c3f46538-2664-40be-8c36-8e8a413fd9fb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change beforePath="$PROJECT_DIR$/game/templates/game/game.html" afterPath="$PROJECT_DIR$/game/templates/game/game.html" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/american ball.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/attach.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/bag.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/ball.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/basket ball.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/battery.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/black.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/book.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/bowling ball.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/briefcase.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/brush.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/bulb.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/calculator.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/camera.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/chair.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/chair2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/clock.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/comb.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/cycle.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/cycle2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/desk.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/drill.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/fan.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/flash.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/fork.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/glass.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/glass2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/glasses.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/grater.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/hammer.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/hanger.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/hanger2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/hat.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/hat2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/headphone.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/ipod.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/iron.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/joystick.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/keyboard.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/knife.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/lock.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/marker.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/mic.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/microwave.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/mixer.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/mixer2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/mobile.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/monitor.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/mouse.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/oil.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/pan.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/pencil.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/person.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/person2.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/person3.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/person4.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/person5.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/person6.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/pillow.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/pitchfork.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/plier.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/pot.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/pram.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/printer.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/push pin.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/radiator.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/rake.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/roller.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/roller2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/ruler.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/saw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/scale.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/scissor.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/scooter.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/screw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/screwdriver.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/shovel.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/skateboard.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/sofa.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/spatula.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/stapler.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/suitcase.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/tablet.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/tea pot.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/tennis ball.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/toilet paper.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/tv.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/tyre.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/tyre2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/umbrella.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/vacuum.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/videocam.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/washing machine.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/wheel chair.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/wheel.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/img/whisk.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/game/templates/game/index.html" afterPath="$PROJECT_DIR$/game/templates/game/index.html" />
       <change beforePath="$PROJECT_DIR$/game/urls.py" afterPath="$PROJECT_DIR$/game/urls.py" />
-      <change beforePath="$PROJECT_DIR$/warehouseSim/urls.py" afterPath="$PROJECT_DIR$/warehouseSim/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -147,28 +48,28 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/templates/game/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+            <state relative-caret-position="396">
+              <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="72">
+              <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="game.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/templates/game/game.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="248" column="21" lean-forward="true" selection-start-line="248" selection-start-column="21" selection-end-line="248" selection-end-column="21" />
+            <state relative-caret-position="360">
+              <caret line="68" column="43" lean-forward="false" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -178,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/warehouseSim/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
-              <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+              <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="32" />
               <folding>
                 <element signature="e#646#687#0" expanded="true" />
               </folding>
@@ -247,9 +148,9 @@
         <option value="$PROJECT_DIR$/game/models.py" />
         <option value="$PROJECT_DIR$/game/views.py" />
         <option value="$PROJECT_DIR$/warehouseSim/urls.py" />
-        <option value="$PROJECT_DIR$/game/urls.py" />
         <option value="$PROJECT_DIR$/game/templates/game/index.html" />
         <option value="$PROJECT_DIR$/game/templates/game/game.html" />
+        <option value="$PROJECT_DIR$/game/urls.py" />
       </list>
     </option>
   </component>
@@ -368,11 +269,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1040" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14228936" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2629834" sideWeight="0.4173291" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2629834" sideWeight="0.4173291" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -724,10 +624,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/game/templates/game/game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="68" column="43" lean-forward="false" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/templates/game/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/warehouseSim/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
-          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="32" />
           <folding>
             <element signature="e#646#687#0" expanded="true" />
           </folding>
@@ -736,24 +652,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/templates/game/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/templates/game/game.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="248" column="21" lean-forward="true" selection-start-line="248" selection-start-column="21" selection-end-line="248" selection-end-column="21" />
+        <state relative-caret-position="72">
+          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
           <folding />
         </state>
       </provider>

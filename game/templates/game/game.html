@@ -66,7 +66,7 @@
 			for(y=150; y<=700; y+=50){
 				if(x%150!=0 && y!=400 && y!=700){
 					
-					pic=picArray[z];
+					pic=picArray[z].itemPic;
 					compartments.push(new component(x,y, "gray",48,48));
 					availableItems.push(new component(x+10,y+10,pic,30,30,"img"));
 					if(x<500){
