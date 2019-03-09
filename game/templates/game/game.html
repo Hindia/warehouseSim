@@ -60,24 +60,17 @@
 			this.canvas.height = window.innerHeight;
 			this.c = this.canvas.getContext("2d");	//context
 			document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-			var x,y,z=0;
-		    var yt=180;
-		for(x=50; x<=700; x+=50){
-			for(y=150; y<=700; y+=50){
-				if(x%150!=0 && y!=400 && y!=700){
-					
-					pic=picArray[z].itemPic;
-					compartments.push(new component(x,y, "gray",48,48));
-					availableItems.push(new component(x+10,y+10,pic,30,30,"img"));
-					if(x<500){
-						requiredItems.push(new component(1080,yt,pic,30,30,"img"));
-						yt+=50;
-						
+			var x,y, z=0, yt=180;
+		    var pic=picArray[z].itemPic
+			for(x=50; x<=700; x+=50){
+				for(y=150; y<=700; y+=50){
+					if(x%150!=0 && y!=400 && y!=700){
+						compartments.push(new component(x,y, "gray",48,48));
+						availableItems.push(new component(x+10,y+10,pic,30,30,"img"));
+						z+=1;
 					}
-					if (z<50) z+=1;
-					}
+				}
 			}
-		}
 			this.interval = setInterval(updateGameArea, 50);
 			window.addEventListener('mousedown', function (e) {
 				myGameArea.x = e.pageX;
