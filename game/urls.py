@@ -4,7 +4,7 @@ from rest_framework import routers
 
 urlpatterns = [
     #/
-    url(r'^$', views.index, name='game'),
+    url(r'^$', views.game, name='game'),
 
     #/game/
     url(r'^game/', views.index, name='index'),

@@ -10,6 +10,10 @@ from .serializers import ShelfSerializer, CompartmentSerializer, ItemSerializer
 
 
 # Create your views here.
+def game(request):
+    return render(request, 'game/game.html')
+
+
 def index(request):
     all_shelves = Shelf.objects.all()
     return render(request, 'game/index.html', {'all_shelves': all_shelves})
