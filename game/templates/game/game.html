@@ -33,8 +33,8 @@
 	var requiredItems=[];
 	var availableItems=[];
 	var request = new XMLHttpRequest();
-		request.open("GET", "http://127.0.0.1:8000/items/", false);
-		request.setRequestHeader('Access-Control-Allow-Origin','*');
+	request.open("GET", "http://127.0.0.1:8000/items/", false);
+	request.setRequestHeader('Access-Control-Allow-Origin','*');
 		request.setRequestHeader('Access-Control-Allow-Methods','GET');
         request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 		request.send();
@@ -61,12 +61,15 @@
 			this.c = this.canvas.getContext("2d");	//context
 			document.body.insertBefore(this.canvas, document.body.childNodes[0]);
 			var x,y, z=0, yt=180;
-		    var pic=picArray[z].itemPic
+
 			for(x=50; x<=700; x+=50){
 				for(y=150; y<=700; y+=50){
 					if(x%150!=0 && y!=400 && y!=700){
+
 						compartments.push(new component(x,y, "gray",48,48));
-						availableItems.push(new component(x+10,y+10,pic,30,30,"img"));
+						availableItems.push(new component(x+10,y+10,picArray[z].itemPic,30,30,"img"));
+						if(z==50)
+							z+=6;
 						z+=1;
 					}
 				}
