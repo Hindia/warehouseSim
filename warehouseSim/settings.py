@@ -26,7 +26,7 @@ SECRET_KEY = 'b9&1fsb+=7s09i#8!sq7qd!4yi1^!-%&i!j*^auf+$vl=si&y_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['warehousesim.herokuapp.com']
 
 
 # Application definition
