@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c3f46538-2664-40be-8c36-8e8a413fd9fb" name="Default" comment="from laptop">
       <change beforePath="$PROJECT_DIR$/warehouseSim/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/warehouseSim/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/warehouseSim/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/warehouseSim/wsgi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +35,7 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/warehouseSim/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="143">
@@ -57,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/warehouseSim/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="123" column="78" selection-start-line="123" selection-start-column="78" selection-end-line="123" selection-end-column="78" />
+            <state relative-caret-position="169">
+              <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
             </state>
           </provider>
         </entry>
@@ -136,8 +135,8 @@
         <option value="$PROJECT_DIR$/game/templates/game/game.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/runtime.txt" />
-        <option value="$PROJECT_DIR$/warehouseSim/settings.py" />
         <option value="$PROJECT_DIR$/warehouseSim/wsgi.py" />
+        <option value="$PROJECT_DIR$/warehouseSim/settings.py" />
       </list>
     </option>
   </component>
@@ -164,24 +163,6 @@
               <item name="warehouseSim" type="b2602c69:ProjectViewProjectNode" />
               <item name="warehouseSim" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warehouseSim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="warehouseSim" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warehouseSim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="warehouseSim" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warehouseSim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="warehouseSim" type="462c0819:PsiDirectoryNode" />
-              <item name="warehouseSim" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -409,13 +390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/warehouseSim/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="123" column="78" selection-start-line="123" selection-start-column="78" selection-end-line="123" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/warehouseSim/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -423,6 +397,13 @@
           <folding>
             <element signature="e#229#238#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warehouseSim/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
         </state>
       </provider>
     </entry>
