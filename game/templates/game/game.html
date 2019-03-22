@@ -43,10 +43,13 @@
 	//var picArray = JSON.parse(request.responseText);
 
 	var picArray="";
-	$.getJSON("items.json", function(json) {
-    	console.log(json); // this will show the info it in firebug console
-    	picArray=json;
-	});
+	fetch('items.json')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(JSON.stringify(myJson));
+  });
 
 	function startGame() {
 
