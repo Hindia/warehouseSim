@@ -33,23 +33,23 @@
 	var requiredItems=[];
 	var availableItems=[];
 
-	//var request = new XMLHttpRequest();
-	//request.open("GET", "http://www.cc.puv.fi/~e1500943/items.json", false);
-	//request.setRequestHeader('Access-Control-Allow-Origin','*');
-	//	request.setRequestHeader('Access-Control-Allow-Methods','GET');
-    //    request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-	//	request.send();
+	var request = new XMLHttpRequest();
+	request.open("GET", "http://www.cc.puv.fi/~e1500943/items.json", false);
+	request.setRequestHeader('Access-Control-Allow-Origin','*');
+	request.setRequestHeader('Access-Control-Allow-Methods','GET');
+    request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+	request.send();
 
-	//var picArray = JSON.parse(request.responseText);
+	var picArray = JSON.parse(request.responseText);
 
-	var picArray="";
-	fetch('templates/game/items.json')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(myJson) {
-    console.log(JSON.stringify(myJson));
-  });
+	//var picArray="";
+	//fetch('templates/game/items.json')
+  //.then(function(response) {
+   // return response.json();
+ // })
+ // .then(function(myJson) {
+ //   console.log(JSON.stringify(myJson));
+ // });
 
 	function startGame() {
 
