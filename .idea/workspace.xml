@@ -171,6 +171,11 @@
             <path>
               <item name="warehousesim" type="b2602c69:ProjectViewProjectNode" />
               <item name="warehousesim" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="warehousesim" type="b2602c69:ProjectViewProjectNode" />
+              <item name="warehousesim" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
