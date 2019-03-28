@@ -2,7 +2,7 @@
   "name": "warehousesim",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "./build/",
+  "homepage" : "/build/",
   "dependencies": {
     "express": "^4.16.4",
     "express-favicon": "^2.0.1",
@@ -13,10 +13,10 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "react-scripts build",
+    "build": "react-scripts public",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postinstall": "npm run build"
+    "postinstall": "npm run public"
   },
   "engines":{
     "node": "10.15.3",
