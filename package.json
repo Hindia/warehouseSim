@@ -13,10 +13,10 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "react-scripts src",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postinstall": "npm run src"
+    "postinstall": "npm run build"
   },
   "engines": {
     "node": "10.15.3",
