@@ -1,5 +1,4 @@
 //server.js
-
 const express = require('express');
 const favicon = require('express-favicon');
 const path = require('path');
@@ -15,7 +14,7 @@ app.get('/ping', function (req, res) {
 });
 //build mode
 app.get('*', function (req, res) {
-  res.sendFile(path.join(warehouseSim, 'build', 'index.html'));
+  res.sendFile(path.join(warehouseSim, 'src', 'index.html'));
 });
 
 app.listen(port);
