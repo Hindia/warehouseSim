@@ -33,7 +33,7 @@ $RECYCLE.BIN/
 /coverage
 
 # production
-.idea
+
 
 # misc
 .DS_Store
