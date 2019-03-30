@@ -9,14 +9,16 @@
     "path": "^0.12.7",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "serve": "^10.1.2"
   },
   "scripts": {
-    "start": "node server.js",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "postinstall": "npm run build"
+    "heroku-postbuild": "npm run build"
   },
   "engines": {
     "node": "10.15.3",
@@ -32,7 +34,14 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "webpack": "^4.28.3",
+    "autoprefixer": "^9.5.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^2.1.1",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^0.23.1",
     "webpack-cli": "^3.3.0"
   }
 }
